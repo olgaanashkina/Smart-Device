@@ -1,0 +1,14 @@
+.letter {
+  width: 100%;
+  min-height: 720px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $blue;
+}
+
+.letter__wrap {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

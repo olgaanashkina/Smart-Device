@@ -1,4 +1,15 @@
 @import "blocks/var-mixin.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/page-header.scss";
+@import "blocks/logotype.scss";
+@import "blocks/feedback.scss";
+@import "blocks/toggle.scss";
+@import "blocks/page-main.scss";
+@import "blocks/prime.scss";
+@import "blocks/advantages.scss";
+@import "blocks/company.scss";
+@import "blocks/goods.scss";
+@import "blocks/letter.scss";
 
 @font-face {
   font-family: "PT Mono";
@@ -27,15 +38,18 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  min-width: 1920px;
+  max-width: 1920px;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #666666;
 }
 
 a {

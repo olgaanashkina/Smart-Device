@@ -1,0 +1,101 @@
+.goods {
+  width: 100%;
+  min-height: 938px;
+  display: flex;
+  justify-content: center;
+  background-color: $coal;
+}
+
+.goods__wrap {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods__heading {
+  @include marginnone;
+  margin-top: 90px;
+  margin-bottom: 45px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+}
+
+.goods__list {
+  width: 100%;
+  @include marginnone;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods__item {
+  @include marginnone;
+  max-width: 30%;
+  height: 620px;
+  background-repeat: no-repeat;
+
+  &--making {
+    background-image: url("../img/make-desctop@1x.jpg");
+  }
+
+  &--setting {
+    background-image: url("../img/setting-desctop@1x.jpg");
+  }
+
+  &--led {
+    background-image: url("../img/ledstrip-desctop@1x.jpg");
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 178, 255, 0.25)
+  }
+}
+
+.goods__link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 370px;
+  height: 620px;
+  background-color: rgba(27,45,55,0.8);
+}
+
+.goods__title {
+  position: relative;
+  width: 170px;
+  @include marginnone;
+  margin-top: 90px;
+  margin-left: 46px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    bottom: -470px;
+    right: -155px;
+    background-color: $blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: -450px;
+    right: -135px;
+    background-image: url("../img/icon-pointer.svg");
+    background-repeat: no-repeat;
+  }
+}

@@ -1,5 +1,6 @@
-$desktop-width: 1920px;
-$tablet-width: 770px;
+$desktop-width: 1023px;
+$tablet-width: 768px;
+$mobile-width-only: 767px;
 $mobile-width: 320px;
 $blue: #00b2ff;
 $white: #ffffff;
@@ -7,3 +8,18 @@ $light-gray: #ebebeb;
 $gray: #666666;
 $coal: #1b2d37;
 $dark-grey: #203c42;
+$hoar: #e5e5e5;
+$black: #000000;
+
+@mixin marginnone {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin center {
+  margin: 0 auto;
+}
+
+@mixin line {
+  border: solid 1px red;
+}

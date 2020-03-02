@@ -1,0 +1,75 @@
+.feedback {
+  max-width: 380px;
+  width: 35%;
+  @include marginnone;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback__link {
+  width: 180px;
+  position: relative;
+
+  &--mail::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 14px;
+    top: 3px;
+    left: -40px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--phone::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0px;
+    left: -40px;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.feedback__content {
+  min-width: 150px;
+  @include marginnone;
+  line-height: 18px;
+  color: $white;
+}
+
+@media (max-width: $desktop-width) {
+  .feedback__content {
+    display: none;
+  }
+
+  .feedback {
+    width: 90px;
+  }
+
+  .feedback__link {
+    width: 30px;
+
+    &--mail::before {
+      width: 25px;
+      height: 18px;
+      top: 0px;
+      left: 0px;
+    }
+
+    &--phone::before {
+      width: 24px;
+      height: 24px;
+      top: 0px;
+      left: 0px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    min-width: 73px;
+  }
+}

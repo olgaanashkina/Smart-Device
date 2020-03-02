@@ -1,0 +1,41 @@
+.logotype {
+  min-width: 210px;
+  width: 15%;
+  @include marginnone;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logotype__wrap {
+  width: 140px;
+  max-height: 46px;
+  @include marginnone;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #788891;
+}
+
+.logotype__head {
+  @include marginnone;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 27px;
+  color: $white;
+}
+
+.logotype__slogan {
+  @include marginnone;
+}
+
+@media (max-width: $mobile-width-only) {
+  .logotype__head,
+  .logotype__slogan {
+    display: none;
+  }
+}
