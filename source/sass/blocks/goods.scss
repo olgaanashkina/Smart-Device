@@ -26,17 +26,21 @@
 
 .goods__list {
   width: 100%;
+  min-width: 750px;
   @include marginnone;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .goods__item {
   @include marginnone;
-  max-width: 30%;
-  height: 620px;
+  width: 30%;
+  min-width: 345px;
+  min-height: 620px;
   background-repeat: no-repeat;
+  margin-bottom: 60px;
 
   &--making {
     background-image: url("../img/make-desctop@1x.jpg");
@@ -60,13 +64,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 370px;
-  height: 620px;
+  min-width: 346px;
+  min-height: 620px;
   background-color: rgba(27,45,55,0.8);
 }
 
 .goods__title {
-  position: relative;
   width: 170px;
   @include marginnone;
   margin-top: 90px;
@@ -77,25 +80,144 @@
   font-size: 20px;
   line-height: 30px;
   color: $white;
+}
+
+.goods__pointer {
+  position: relative;
+  width: 63px;
+  height: 63px;
+  align-self: flex-end;
+  background-color: $blue;
 
   &::before {
     content: "";
     position: absolute;
-    width: 63px;
-    height: 63px;
-    bottom: -470px;
-    right: -155px;
-    background-color: $blue;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
     width: 10px;
     height: 10px;
-    bottom: -450px;
-    right: -135px;
+    top: 27px;
+    left: 27px;
     background-image: url("../img/icon-pointer.svg");
     background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .goods {
+    width: 100%;
+    min-height: 1070px;
+  }
+
+  .goods__wrap {
+    width: 94%;
+    min-width: 715px;
+    @include center;
+  }
+
+  .goods__heading {
+    width: 100%;
+    min-width: 715px;
+    margin-top: 53px;
+    margin-bottom: 25px;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .goods__list {
+    width: 100%;
+    min-width: 715px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .goods__link {
+    width: 100%;
+    min-width: 715px;
+    min-height: 256px;
+  }
+
+  .goods__item {
+    width: 93%;
+    min-width: 715px;
+    min-height: 256px;
+    background-repeat: no-repeat;
+    margin-bottom: 46px;
+
+    &--making {
+      background-image: url("../img/make-tablet@1x.jpg");
+      background-size: cover;
+    }
+
+    &--setting {
+      background-image: url("../img/setting-tablet@1x.jpg");
+      background-size: cover;
+    }
+
+    &--led {
+      background-image: url("../img/ledstrip-tablet@1x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .goods__title {
+    width: 180px;
+    margin-top: 43px;
+    margin-left: 44px;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .goods__wrap {
+    width: 91%;
+    min-width: 290px;
+    @include center;
+    margin-bottom: 30px;
+  }
+
+  .goods__heading {
+    width: 100%;
+    min-width: 280px;
+    margin-top: 50px;
+    margin-bottom: 37px;
+    padding-left: 4.6%;
+    font-size: 28px;
+  }
+
+  .goods__list {
+    width: 100%;
+    min-width: 290px;
+  }
+
+  .goods__link {
+    width: 100%;
+    min-width: 290px;
+    min-height: 256px;
+  }
+
+  .goods__item {
+    width: 93%;
+    min-width: 290px;
+    min-height: 256px;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+
+    &--making {
+      background-image: url("../img/make-mobile@1x.jpg");
+      background-size: cover;
+    }
+
+    &--setting {
+      background-image: url("../img/setting-mobile@1x.jpg");
+      background-size: cover;
+    }
+
+    &--led {
+      background-image: url("../img/ledstrip-mobile@1x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .goods__title {
+    margin-top: 23px;
+    margin-left: 35px;
   }
 }

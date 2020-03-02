@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include line;
 }
 
 .prime__head {
@@ -66,7 +65,12 @@
   font-size: 16px;
   line-height: 19px;
   border: none;
+  border-radius: 5px;
   background-color: $blue;
+
+  &--mob {
+    display: none;
+  }
 }
 
 .prime__link {
@@ -80,10 +84,11 @@
   opacity: 0.5;
 }
 
-@media (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .prime {
     width: 89%;
     min-height: 350px;
+    margin-bottom: 54px;
     padding-left: 11%;
     background-image: url("../img/boards-tablet@1x.png");
     background-position: top 10% right -5%;
@@ -121,9 +126,58 @@
     margin-top: 50px;
     margin-left: 50px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .prime {
+    width: 90%;
+    min-height: 590px;
+    margin-bottom: 0;
+    padding-left: 10%;
+    background-image: url("../img/boards-mobile@1x.png");
+    background-position: top 2% right -5%;
+  }
+
+  .prime__wrap {
+    max-width: 290px;
+    margin-top: 210px;
+  }
+
+  .prime__head {
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 15px;
+  }
+
+  .prime__text {
+    margin-left: 45px;
     font-size: 16px;
-    line-height: 19px;
-    border: none;
-    background-color: $blue;
+    line-height: 156.8%;
+
+    &::before {
+      width: 33px;
+      height: 2px;
+      top: 12px;
+      left: -40px;
+    }
+  }
+
+  .prime__scroll {
+    display: none;
+  }
+
+  .prime__toggle {
+    display: none;
+
+    &--mob {
+      display: flex;
+      max-width: 287px;
+      height: 55px;
+      width: 89.5%;
+      margin-top: 50px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
   }
 }

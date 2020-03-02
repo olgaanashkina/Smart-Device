@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
-  max-width: 1920px;
-  min-width: 320px;
+  // max-width: 1920px;
+  // min-width: 320px;
   background-image: url("../img/background-desctop.png");
   background-repeat: no-repeat;
   background-size: auto;
@@ -17,26 +17,26 @@
   }
 }
 
-@media (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .wrapper {
-    width: 100%;
-    // max-width: 1023px;
-    min-width: 768px;
     background-image: url("../img/background-tablet.png");
+    background-size: 100%;
 
     &--section {
       background-image: url("../img/mask-about-tablet.png");
+      background-size: 100%;
     }
   }
 }
 
-// @media (max-width: $tablet-width) {
-//   .wrapper {
-//     max-width: 768px;
-//     background-image: url("../img/background-tablet.png");
-//
-//     &--section {
-//       background-image: url("../img/mask-about-tablet.png");
-//     }
-//   }
-// }
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .wrapper {
+    background-image: url("../img/background-mobile.png");
+    background-size: 100%;
+
+    &--section {
+      background-image: url("../img/mask-about-mobile.png");
+      background-size: 100%;
+    }
+  }
+}

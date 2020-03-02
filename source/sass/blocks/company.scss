@@ -35,6 +35,10 @@
   @include marginnone;
   margin-bottom: 20px;
   margin-bottom: 30px;
+
+  &--tab {
+    display: none;
+  }
 }
 
 .company__link {
@@ -54,4 +58,69 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $blue;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .company {
+    width: 69.5%;
+    min-height: 360px;
+    margin-bottom: 80px;
+    margin-left: 210px;
+    align-self: flex-start;
+    padding-right: 0;
+
+    &::before {
+      top: 0px;
+      left: -210px;
+      background-image: url("../img/2005.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .company__heading {
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  .company__content {
+    &--desctop {
+      display: none;
+    }
+
+    &--tab {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .company {
+    width: 92%;
+    @include center;
+    @include marginnone;
+    margin-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .company__heading  {
+    padding-top: 30px;
+    font-size: 28px;
+  }
+
+  .company__content {
+    &--desctop {
+      display: none;
+    }
+
+    &--tab {
+      display: block;
+    }
+  }
+
+  .company__link {
+    margin-bottom: 65px;
+  }
 }

@@ -38,6 +38,7 @@
           <h1 class="prime__head">Печатные платы</h1>
           <p class="prime__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
           <a class="prime__toggle toggle" href="#form">Получить бесплатную консультацию</a>
+          <a class="prime__toggle prime__toggle--mob toggle" href="#form">Бесплатная консультация</a>
           <a class="prime__link" href="#advantages">
             <span class="prime__scroll">Скролл вниз</span>
           </a>
@@ -68,7 +69,8 @@
         <section class="page-main__company company">
           <h2 class="company__heading">О компании</h2>
           <p class="company__content">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p class="company__content">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <p class="company__content company__content--desctop">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+          <p class="company__content company__content--tab">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</p>
           <a class="company__link toggle" href="#">Подробнее</a>
         </section>
       </div>
@@ -85,13 +87,13 @@
             <li class="goods__item goods__item--setting">
               <a class="goods__link" href="#">
                 <p class="goods__title">Монтаж печатных плат</p>
-                <button class="goods__button" type="button"></button>
+                <div class="goods__pointer"></div>
               </a>
             </li>
             <li class="goods__item goods__item--led">
               <a class="goods__link" href="#">
                 <p class="goods__title">Комплектующие для светотехники</p>
-                <button class="goods__button" type="button"></button>
+                <div class="goods__pointer"></div>
               </a>
             </li>
           </ul>
@@ -102,15 +104,15 @@
           <p class="letter__tagline" id="form">Остались вопросы? Задайте их нам!</p>
           <p class="letter__content">Мы проконсультируем Вас бесплатно</p>
           <form class="form" action="index.html" method="post">
-            <fieldset class="form__communication">
+            <div class="form__communication">
               <input class="form__name" type="text" name="name" value="" placeholder="Имя">
               <input class="form__phone" type="text" name="tel" value="" placeholder="Телефон">
-            </fieldset>
-            <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="8" cols="80"></textarea>
+            </div>
+            <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="10" cols="70"></textarea>
             <div class="form__wrap">
-              <input class="form__checkbox" type="checkbox" name="checkbox" id="consent">
               <label for="consent">Я согласен на обработку  персональных данных</label>
-              <button class="form__button" type="submit" name="button">Задать вопрос</button>
+              <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent">
+              <button class="form__button toggle" type="submit" name="button">Задать вопрос</button>
             </div>
           </form>
         </div>

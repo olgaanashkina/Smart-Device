@@ -12,22 +12,27 @@
 .page-header__toggle {
   width: 180px;
   height: 45px;
-  margin-left: 60px;
+  margin-left: 1%;
 }
 
-@media (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .page-header {
     width: 94%;
-    padding-top: 20px;
+    padding-top: 25px;
   }
+
   .page-header__toggle {
     display: none;
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .page-header {
     width: 94%;
-    padding-top: 10px;
+    padding-top: 20px;
+  }
+
+  .page-header__toggle {
+    display: none;
   }
 }

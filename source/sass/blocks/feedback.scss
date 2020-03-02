@@ -40,7 +40,7 @@
   color: $white;
 }
 
-@media (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .feedback__content {
     display: none;
   }
@@ -54,22 +54,51 @@
 
     &--mail::before {
       width: 25px;
-      height: 18px;
-      top: 0px;
+      height: 19px;
+      top: -13px;
       left: 0px;
+      background-image: url("../img/icon-mail-big.svg");
+      background-repeat: no-repeat;
     }
 
     &--phone::before {
       width: 24px;
       height: 24px;
-      top: 0px;
+      top: -15px;
       left: 0px;
+      background-image: url("../img/icon-phone-big.svg");
+      background-repeat: no-repeat;
     }
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .feedback {
-    min-width: 73px;
+    width: 74px;
+  }
+
+  .feedback__content {
+    display: none;
+  }
+
+  .feedback__link {
+
+    &--mail::before {
+      width: 25px;
+      height: 19px;
+      top: -13px;
+      left: -5px;
+      background-image: url("../img/icon-mail-big.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--phone::before {
+      width: 24px;
+      height: 24px;
+      top: -15px;
+      left: 0px;
+      background-image: url("../img/icon-phone-big.svg");
+      background-repeat: no-repeat;
+    }
   }
 }

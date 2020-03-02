@@ -33,9 +33,14 @@
   @include marginnone;
 }
 
-@media (max-width: $mobile-width-only) {
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .logotype__head,
   .logotype__slogan {
     display: none;
+  }
+
+  .logotype {
+    min-width: 40px;
+
   }
 }
