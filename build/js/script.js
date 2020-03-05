@@ -1,15 +1,26 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+var ESC_KEYCODE = 27;
 
-pageHeader.classList.remove('page-header--nojs');
+var renderModal = function () {
+    var main = document.querySelector('main');
+    var successTemplate = document.querySelector('#modal')
+          .content
+          .querySelector('.modal__block');
+    var successModal = successTemplate.cloneNode(true);
+    main.appendChild(successModal);
+    var removeSuccessModal = function () {
+        successModal.remove();
+    };
+    var closedModal = successModal.querySelector('.modal__toggle');
+    closedModal.addEventListener('click', removeSuccessModal);
+    document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      removeSuccessModal();
+    }
+  });
+}
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
-  }
+var openModal = document.querySelector('.page-header__toggle');
+openModal.addEventListener('click', function () {
+    renderModal();
 });

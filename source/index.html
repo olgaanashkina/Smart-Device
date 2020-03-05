@@ -7,7 +7,6 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="preload" href="/fonts/ptmono.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/robotocondensed.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/robotocondensedbold.woff2" as="font" crossorigin="anonymous">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -105,13 +104,13 @@
           <p class="letter__content">Мы проконсультируем Вас бесплатно</p>
           <form class="form" action="index.html" method="post">
             <div class="form__communication">
-              <input class="form__name" type="text" name="name" value="" placeholder="Имя">
-              <input class="form__phone" type="text" name="tel" value="" placeholder="Телефон">
+              <input class="form__name" type="text" name="name" value="" placeholder="Имя" required="required">
+              <input class="form__phone" type="text" name="tel" value="" placeholder="Телефон" required="required" pattern="+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
             </div>
-            <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="10" cols="70"></textarea>
+            <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="7" cols="70"></textarea>
             <div class="form__wrap">
-              <label for="consent">Я согласен на обработку  персональных данных</label>
               <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent">
+              <label for="consent">Я согласен на обработку  персональных данных</label>
               <button class="form__button toggle" type="submit" name="button">Задать вопрос</button>
             </div>
           </form>
@@ -123,11 +122,12 @@
         <div class="footer__wrap">
           <a class="footer__logo logotype">
             <img class="logotype__image" src="img/logo-desctop.png" width="52" height="52" alt="Логотип Smart Device">
-            <div class="logotype__wrap">
-              <h1 class="logotype__head">Smart Device</h1>
-              <p class="logotype__slogan">умные технологии</p>
+              <div class="logotype__wrap logotype__wrap--foot">
+              <h1 class="logotype__head logotype__head--foot">Smart Device</h1>
+              <p class="logotype__slogan logotype__slogan--foot">умные технологии</p>
             </div>
           </a>
+          <p class="footer__owner">1999-2018 SD Service Devices</p>
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item social__item--fb">
@@ -148,8 +148,9 @@
             </ul>
           </div>
         </div>
-        <nav class="footer__navigation navigation">
+        <nav class="footer__navigation navigation--open navigation">
           <h2 class="navigation__head">Разделы сайта</h2>
+          <button class="navigation__toggle" type="button" name="button"></button>
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" href="#">О компании</a>
@@ -174,8 +175,9 @@
             </li>
           </ul>
         </nav>
-        <div class="footer__address address">
+        <div class="footer__address address--open address">
           <h2 class="address__head">Наш офис</h2>
+          <button class="address__toggle" type="button" name="button"></button>
           <p class="address__content">г. Мытищи, Олимпийский проспект, д.10</p>
           <span class="address__phone">+7 (495) 589-40-50</span>
           <span class="address__phone">+7 (925) 003-87-67</span>
@@ -187,8 +189,28 @@
         <p class="addition__owner">1999-2018 SD Service Devices</p>
         <p class="addition__privacy">Условия конфиденциальности</p>
         <p class="addition__developer">Developed by wow studio</p>
-      </section>
+        </section>
     </footer>
   </div>
+  <template id="modal">
+    <section class="modal__block">
+      <div class="modal__container">
+        <div class="modal__wrap">
+          <button class="modal__toggle" type="button" name="button"></button>
+          <h1 class="modal__tagline">Закажите звонок</h1>
+          <p class="modal__content">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form class="modal__form" action="index.html" method="post">
+            <input class="modal__name" type="text" name="name" value="" placeholder="Имя" autofocus="autofocus" required="required">
+            <input class="modal__phone" type="text" name="tel" value="" placeholder="Телефон" required="required">
+            <textarea class="modal__text" name="text" placeholder="Ваш вопрос" rows="4" cols="40"></textarea>
+            <button class="modal__button toggle" type="submit" name="button">Отправить</button>
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent">
+            <label for="consent">Я согласен на обработку  персональных данных</label>
+          </form>
+        </div>
+      </div>
+    </section>
+  </template>
+  <script src="js/script.js"></script>
 </body>
 </html>

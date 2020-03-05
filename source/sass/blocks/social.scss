@@ -1,0 +1,20 @@
+.social {
+  width: 115px;
+  display: flex;
+}
+
+.social__list {
+  width: 115px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  @include marginnone;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+
+}

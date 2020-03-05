@@ -27,6 +27,11 @@
   font-size: 25px;
   line-height: 27px;
   color: $white;
+
+  &--foot {
+    line-height: 29px;
+    color: $dark-grey;
+  }
 }
 
 .logotype__slogan {
@@ -37,10 +42,13 @@
   .logotype__head,
   .logotype__slogan {
     display: none;
+
+    &--foot {
+      display: block;
+    }
   }
 
   .logotype {
-    min-width: 40px;
-
+    margin-right: 0;
   }
 }

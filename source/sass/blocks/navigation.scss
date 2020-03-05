@@ -1,0 +1,133 @@
+.navigation {
+  width: 40%;
+  min-width: 530px;
+  max-height: 145px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation__head {
+  @include marginnone;
+  margin-bottom: 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $coal;
+}
+
+.navigation__toggle {
+  display: none;
+}
+
+.navigation__list {
+  list-style: none;
+  @include marginnone;
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+.navigation__item {
+  margin-right: 65px;
+  width: 48%;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .navigation {
+    width: 34%;
+    min-width: 245px;
+    max-height: 290px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation__toggle {
+    display: none;
+  }
+
+  .navigation__list {
+    width: 100%;
+    min-width: 245px;
+    max-height: 290px;
+    flex-wrap: nowrap;
+  }
+
+  .navigation__item {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .navigation {
+    position: relative;
+    width: 90%;
+    min-width: 290px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+  }
+
+  .navigation--close .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  right: 0;
+  background-image: url("../img/icon-close-mob.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: $white;
+  }
+
+  .navigation--open .navigation__toggle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/icon-open.svg");
+    background-repeat: no-repeat;
+    background-color: $white;
+  }
+
+  .navigation--close .navigation__list {
+    display: none;
+  }
+
+  .navigation--open .navigation__list {
+    display: block;
+  }
+
+  .navigation__list {
+    width: 100%;
+    min-width: 260px;
+    min-height: 260px;
+    flex-wrap: nowrap;
+  }
+
+  .navigation__item {
+    width: 100%;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,154 @@
+.form {
+  width: 100%;
+  min-width: 570px;
+  min-height: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.form__communication {
+  width: 100%;
+  min-width: 570px;
+  @include marginnone;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form__name,
+.form__phone {
+  width: 43%;
+  min-width: 230px;
+  border: none;
+	padding: 14px 16px;
+	background-color: rgba(255, 255, 255, 0.1);
+  color: $white;
+  font-size: 16px;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.form__text {
+  width: 95%;
+  min-width: 520px;
+  border: none;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $white;
+  font-size: 16px;
+  resize: none;
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.form__wrap {
+  width: 100%;
+  min-width: 570px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.form__button {
+  width: 47%;
+  min-width: 270px;
+}
+
+.form__wrap label {
+  width: 40%;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.8;
+}
+
+.form__checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 3px;
+  left: -40px;
+  border: 1px solid $white;
+}
+
+.form__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 6px;
+  top: 9px;
+  left: -35px;
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .form {
+    width: 100%;
+    min-width: 590px;
+    min-height: 345px;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .form {
+    width: 100%;
+    min-width: 290px;
+    min-height: 410px;
+    @include marginnone;
+  }
+
+  .form__communication {
+    width: 100%;
+    min-width: 290px;
+    min-height: 120px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .form__name,
+  .form__phone {
+    width: 90%;
+    min-width: 258px;
+  }
+
+  .form__text {
+    width: 90%;
+    min-width: 258px;
+    max-height: 104px;
+  }
+
+  .form__wrap {
+    width: 100%;
+    min-width: 290px;
+    min-height: 110px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .form__wrap label {
+    width: 240px;
+    padding-left: 10px;
+  }
+
+  .form__button {
+    width: 290px;
+    height: 48px;
+  }
+
+  .form__checkbox + label::before {
+    left: -20px;
+  }
+
+  .form__checkbox:checked + label::after {
+    left: -15px;
+  }
+}

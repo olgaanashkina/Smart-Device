@@ -1,0 +1,102 @@
+.address {
+  width: 24%;
+  max-width: 340px;
+  max-height: 145px;
+  display: flex;
+  flex-direction: column;
+}
+
+.address__head {
+  @include marginnone;
+  margin-bottom: 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $coal;
+}
+
+.address__content,
+.address__phone {
+  @include marginnone;
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .address {
+    width: 46.5%;
+    max-width: 335px;
+    max-height: 290px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .address {
+    position: relative;
+    width: 90%;
+    min-width: 290px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .address__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+  }
+
+  .address--close .address__toggle::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  right: 0;
+  background-image: url("../img/icon-close-mob.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: $white;
+  }
+
+  .address--open .address__toggle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/icon-open.svg");
+    background-repeat: no-repeat;
+    background-color: $white;
+  }
+
+  .address--close .address__content,
+  .address--close .address__phone {
+    display: none;
+  }
+
+  .address--open .address__content,
+  .address--open .address__phone {
+    display: block;
+  }
+
+  .address__content,
+  .address__phone {
+    width: 93%;
+  }
+}
