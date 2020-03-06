@@ -20,7 +20,28 @@ var renderModal = function () {
   });
 }
 
+var validationName = function () {
+  var inputName = document.querySelector('.modal__name');
+  inputName.addEventListener('invalid', function (evt) {
+    if (inputName.validity.tooShort) {
+      inputName.setCustomValidity('Имя должно быть не менее 3-х символов');
+    } else if (inputName.validity.tooLong) {
+      inputName.setCustomValidity('Имя не должно быть больше 20-ти символов');
+    } else if (inputName.validity.valueMissing) {
+      inputName.setCustomValidity('Поле обязательно для заполнения');
+    } else {
+      inputName.setCustomValidity('');
+    }
+  });
+}
+
+// var validationPhone = function () {
+//   var inputPhone = document.querySelector('.modal__phone');
+// }
+
 var openModal = document.querySelector('.page-header__toggle');
 openModal.addEventListener('click', function () {
     renderModal();
+    document.querySelector('.modal__name').focus();
+    validationName();
 });

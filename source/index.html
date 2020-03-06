@@ -102,10 +102,10 @@
         <div class="letter__wrap">
           <p class="letter__tagline" id="form">Остались вопросы? Задайте их нам!</p>
           <p class="letter__content">Мы проконсультируем Вас бесплатно</p>
-          <form class="form" action="index.html" method="post">
+          <form class="form" action="index.html" method="post" autocomplete="off">
             <div class="form__communication">
               <input class="form__name" type="text" name="name" value="" placeholder="Имя" required="required">
-              <input class="form__phone" type="text" name="tel" value="" placeholder="Телефон" required="required" pattern="+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}">
+              <input class="form__phone" type="text" name="tel" value="" placeholder="Телефон" required="required">
             </div>
             <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="7" cols="70"></textarea>
             <div class="form__wrap">
@@ -199,18 +199,19 @@
           <button class="modal__toggle" type="button" name="button"></button>
           <h1 class="modal__tagline">Закажите звонок</h1>
           <p class="modal__content">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form class="modal__form" action="index.html" method="post">
-            <input class="modal__name" type="text" name="name" value="" placeholder="Имя" autofocus="autofocus" required="required">
+          <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="modal__name" type="text" name="name" value="" placeholder="Имя" minlength="2" maxlength="20" required="required">
             <input class="modal__phone" type="text" name="tel" value="" placeholder="Телефон" required="required">
             <textarea class="modal__text" name="text" placeholder="Ваш вопрос" rows="4" cols="40"></textarea>
-            <button class="modal__button toggle" type="submit" name="button">Отправить</button>
-            <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent">
-            <label for="consent">Я согласен на обработку  персональных данных</label>
+            <button class="modal__button toggle" type="submit">Отправить</button>
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="resolution">
+            <label for="resolution">Я согласен на обработку  персональных данных</label>
           </form>
         </div>
       </div>
     </section>
   </template>
+  </form>
   <script src="js/script.js"></script>
 </body>
 </html>
