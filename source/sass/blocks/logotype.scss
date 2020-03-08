@@ -7,6 +7,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  &--foot {
+    align-self: flex-end;
+  }
 }
 
 .logotype__wrap {
@@ -38,6 +42,15 @@
   @include marginnone;
 }
 
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .logotype {
+
+    &--foot {
+      align-self: center;
+    }
+  }
+}
+
 @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .logotype__head,
   .logotype__slogan {
@@ -49,6 +62,10 @@
   }
 
   .logotype {
-    margin-right: 0;
+
+    &--foot {
+      margin-right: 0;
+      @include center;
+    }
   }
 }

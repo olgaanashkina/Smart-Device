@@ -71,6 +71,12 @@
   &--mob {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+  }
 }
 
 .prime__link {
@@ -82,6 +88,11 @@
   line-height: 16px;
   color: $white;
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1.0;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {

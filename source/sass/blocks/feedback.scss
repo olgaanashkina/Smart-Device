@@ -3,102 +3,72 @@
   width: 35%;
   @include marginnone;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .feedback__link {
-  width: 180px;
-  position: relative;
+  min-width: 210px;
+  display: flex;
 
-  &--mail::before {
-    content: "";
-    position: absolute;
-    width: 19px;
-    height: 14px;
-    top: 3px;
-    left: -40px;
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-  }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
 
-  &--phone::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 0px;
-    left: -40px;
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
+    .feedback__content {
+      color: $blue;
+    }
   }
 }
 
 .feedback__content {
   min-width: 150px;
   @include marginnone;
+  margin-left: 15px;
   line-height: 18px;
   color: $white;
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-  .feedback__content {
-    display: none;
-  }
 
   .feedback {
-    width: 90px;
+    width: 80px;
+    justify-content: space-between;
   }
 
   .feedback__link {
-    width: 30px;
+    min-width: 30px;
+  }
 
-    &--mail::before {
-      width: 25px;
+  .feedback__icon {
+
+    &--mail {
+      width: 26px;
       height: 19px;
-      top: -13px;
-      left: 0px;
-      background-image: url("../img/icon-mail-big.svg");
-      background-repeat: no-repeat;
     }
 
-    &--phone::before {
+    &--phone {
       width: 24px;
       height: 24px;
-      top: -15px;
-      left: 0px;
-      background-image: url("../img/icon-phone-big.svg");
-      background-repeat: no-repeat;
     }
+  }
+
+  .feedback__content {
+    display: none;
   }
 }
 
 @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .feedback {
     width: 74px;
+    justify-content: space-between;
+  }
+
+  .feedback__link {
+    min-width: 30px;
   }
 
   .feedback__content {
     display: none;
-  }
-
-  .feedback__link {
-
-    &--mail::before {
-      width: 25px;
-      height: 19px;
-      top: -13px;
-      left: -5px;
-      background-image: url("../img/icon-mail-big.svg");
-      background-repeat: no-repeat;
-    }
-
-    &--phone::before {
-      width: 24px;
-      height: 24px;
-      top: -15px;
-      left: 0px;
-      background-image: url("../img/icon-phone-big.svg");
-      background-repeat: no-repeat;
-    }
   }
 }

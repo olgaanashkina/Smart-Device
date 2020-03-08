@@ -1,12 +1,13 @@
 .navigation {
   width: 40%;
-  min-width: 530px;
-  max-height: 145px;
+  min-width: 310px;
+  min-height: 120px;
   display: flex;
   flex-direction: column;
 }
 
 .navigation__head {
+  width: 100%;
   @include marginnone;
   margin-bottom: 25px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -19,16 +20,14 @@
   color: $coal;
 }
 
-.navigation__toggle {
-  display: none;
-}
-
 .navigation__list {
+  width: 100%;
   list-style: none;
   @include marginnone;
-  max-height: 100px;
+  max-height: 120px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   flex-wrap: wrap;
   font-size: 15px;
   line-height: 25px;
@@ -36,21 +35,21 @@
 }
 
 .navigation__item {
-  margin-right: 65px;
-  width: 48%;
+  width: 50%;
+  min-width: 180px;
+  max-width: 310px;
+  margin-right: 30px;
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .navigation {
-    width: 34%;
-    min-width: 245px;
-    max-height: 290px;
+    width: 45%;
+    min-width: 325px;
+    min-height: 220px;
+    margin-left: 3.5%;
+    padding-top: 35px;
     display: flex;
     flex-direction: column;
-  }
-
-  .navigation__toggle {
-    display: none;
   }
 
   .navigation__list {
@@ -68,61 +67,25 @@
 
 @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .navigation {
-    position: relative;
-    width: 90%;
-    min-width: 290px;
-    min-height: 260px;
+    width: 100%;
+    min-width: 320px;
+    min-height: 73px;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid rgba(53, 55, 53, 0.2);
   }
 
-  .navigation__toggle {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0;
-    z-index: 2;
-    cursor: pointer;
-    border: none;
-  }
-
-  .navigation--close .navigation__toggle::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  right: 0;
-  background-image: url("../img/icon-close-mob.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-  background-color: $white;
-  }
-
-  .navigation--open .navigation__toggle {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 0;
-    right: 0;
-    background-image: url("../img/icon-open.svg");
-    background-repeat: no-repeat;
-    background-color: $white;
-  }
-
-  .navigation--close .navigation__list {
-    display: none;
-  }
-
-  .navigation--open .navigation__list {
-    display: block;
+  .navigation__wrap {
+    width: 90%;
+    min-width: 288px;
+    min-height: 73px;
+    @include center;
   }
 
   .navigation__list {
     width: 100%;
     min-width: 260px;
-    min-height: 260px;
+    min-height: 230px;
     flex-wrap: nowrap;
   }
 

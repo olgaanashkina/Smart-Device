@@ -32,7 +32,8 @@
       margin-right: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $blue;
     color: $white;
 
@@ -41,48 +42,32 @@
     }
   }
 
-  &--price::before {
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 40px;
-    left: 40px;
-    background-image: url("../img/icon-tag.svg");
-    background-repeat: no-repeat;
+  &:hover .advantages__icon,
+  &:focus .advantages__icon {
+    fill: $white;
   }
+}
 
-  &--privacy::before {
-    content: "";
-    position: absolute;
-    width: 36px;
-    height: 31px;
-    top: 40px;
-    left: 40px;
-    background-image: url("../img/icon-detective.svg");
-    background-repeat: no-repeat;
-  }
+.advantages__icon {
+  position: absolute;
+  top: 40px;
+  left: 40px;
 
-  &--shipper::before {
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 40px;
-    left: 40px;
-    background-image: url("../img/icon-contractors.svg");
-    background-repeat: no-repeat;
-  }
-
-  &--time::before {
-    content: "";
-    position: absolute;
+  &--time {
     width: 29px;
     height: 35px;
-    top: 40px;
-    left: 40px;
-    background-image: url("../img/icon-watch.svg");
-    background-repeat: no-repeat;
+  }
+  &--shipper {
+    width: 35px;
+    height: 33px;
+  }
+  &--privacy {
+    width: 36px;
+    height: 31px;
+  }
+  &--price {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -120,13 +105,28 @@
   .advantages__item {
     min-height: 232px;
     padding-bottom: 20px;
+  }
 
-    &--price::before,
-    &--privacy::before,
-    &--shipper::before,
-    &--time::before {
-      top: 25px;
-      left: 27px;
+  .advantages__icon {
+    position: absolute;
+    top: 25px;
+    left: 27px;
+
+    &--time {
+      width: 30px;
+      height: 36px;
+    }
+    &--shipper {
+      width: 32px;
+      height: 33px;
+    }
+    &--privacy {
+      width: 31px;
+      height: 26px;
+    }
+    &--price {
+      width: 33px;
+      height: 33px;
     }
   }
 
@@ -161,14 +161,12 @@
     min-height: 232px;
     padding-bottom: 30px;
     margin-right: 0;
+  }
 
-    &--price::before,
-    &--privacy::before,
-    &--shipper::before,
-    &--time::before {
-      top: 25px;
-      left: 27px;
-    }
+  .advantages__icon {
+    position: absolute;
+    top: 25px;
+    left: 17px;
   }
 
   .advantages__head {

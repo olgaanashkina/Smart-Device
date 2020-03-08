@@ -1,0 +1,46 @@
+@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+  .accordion {
+    position: relative;
+    margin: 28px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      right: 0;
+      background-image: url("../img/icon-open.svg");
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      background-color: $off-white;
+    }
+  }
+
+  .accordion-open {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      right: 0;
+      background-image: url("../img/icon-close-mob.svg");
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      background-color: $off-white;
+    }
+  }
+
+  .accordion__content {
+    display: none;
+  }
+
+  .accordion-open + .content {
+    display: block;
+  }
+}

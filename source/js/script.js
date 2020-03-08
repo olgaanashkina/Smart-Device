@@ -45,3 +45,14 @@ openModal.addEventListener('click', function () {
     document.querySelector('.modal__name').focus();
     validationName();
 });
+
+var accordionItem = document.querySelectorAll('.accordion');
+var open = document.getElementsByClassName('accordion-open');
+
+Array.from(accordionItem).forEach(function(item, i, accordionItem) {
+  item.addEventListener('click', function(e) {
+    if (open.length > 0 && open[0] !== this)
+    open[0].classList.remove('accordion-open');
+    this.classList.toggle('accordion-open');
+  });
+});
