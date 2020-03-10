@@ -57,6 +57,12 @@
 .form__button {
   width: 47%;
   min-width: 270px;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $blue;
+  }
 }
 
 .form__wrap label {
@@ -76,6 +82,10 @@
   top: 3px;
   left: -40px;
   border: 1px solid $white;
+}
+
+.form__checkbox:focus + label::before {
+  outline: 3px auto $dark-grey;
 }
 
 .form__checkbox:checked + label::after {

@@ -41,6 +41,14 @@
   margin-right: 30px;
 }
 
+.navigation__link {
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .navigation {
     width: 45%;

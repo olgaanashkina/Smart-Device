@@ -16,16 +16,31 @@
 }
 
 .addition__copyright,
- .addition__owner,
- .addition__privacy {
+.addition__owner,
+.addition__link {
   width: 17%;
   @include marginnone;
   min-height: 55px;
   padding-top: 14px;
 }
 
-.addition__privacy {
+.addition__link {
   margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $coal;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.addition__privacy {
+  @include marginnone;
 }
 
 .addition__developer {
@@ -50,7 +65,7 @@
     display: none;
   }
 
-  .addition__privacy {
+  .addition__link {
     width: 31%;
     min-width: 220px;
     margin-left: 0;
@@ -80,7 +95,7 @@
     display: none;
   }
 
-  .addition__privacy {
+  .addition__link {
     width: 100%;
     margin-left: 0;
     padding-top: 25px;

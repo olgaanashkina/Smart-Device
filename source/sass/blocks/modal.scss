@@ -70,7 +70,6 @@
   min-height: 412px;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   align-items: stretch;
 }
 
@@ -114,6 +113,12 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $blue;
+    }
 }
 
 .modal__wrap label {

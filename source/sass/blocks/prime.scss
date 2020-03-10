@@ -1,7 +1,7 @@
 .prime {
   width: 87%;
   min-height: 650px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding-left: 13%;
   display: flex;
   background-image: url("../img/boards-desctop@1x.png");
@@ -74,6 +74,7 @@
 
   &:hover,
   &:focus {
+    opacity: 0.8;
     color: $blue;
     background-color: $white;
   }
@@ -99,10 +100,10 @@
   .prime {
     width: 89%;
     min-height: 350px;
-    margin-bottom: 54px;
+    margin-bottom: 73px;
     padding-left: 11%;
     background-image: url("../img/boards-tablet@1x.png");
-    background-position: top 10% right -5%;
+    background-position: top 10% right;
   }
 
   .prime__scroll {
@@ -111,7 +112,7 @@
 
   .prime__wrap {
     max-width: 470px;
-    margin-top: 105px;
+    margin-top: 95px;
     align-items: flex-start;
   }
 
@@ -133,9 +134,9 @@
 
   .prime__toggle {
     max-width: 380px;
-    width: 80%;
-    margin-top: 50px;
-    margin-left: 50px;
+    width: 80.5%;
+    margin-top: 53px;
+    margin-left: 53px;
     margin-bottom: 0;
   }
 }

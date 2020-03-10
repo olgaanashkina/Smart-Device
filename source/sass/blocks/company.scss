@@ -58,6 +58,13 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $blue;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $blue;
+    opacity: 0.8;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {

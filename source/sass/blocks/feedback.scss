@@ -7,16 +7,24 @@
   align-items: center;
 }
 
+.feedback__icon {
+  fill: $blue;
+}
+
 .feedback__link {
   min-width: 210px;
   display: flex;
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    opacity: 0.8;
 
     .feedback__content {
       color: $blue;
+    }
+
+    .feedback__icon {
+      fill: $white;
     }
   }
 }

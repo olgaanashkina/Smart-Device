@@ -11,10 +11,11 @@
   @include marginnone;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+.social__icon {
+  fill: $telegray;
 
-}
-
-@media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
-
+  &:hover,
+  &:focus {
+    fill: $blue;
+  }
 }
