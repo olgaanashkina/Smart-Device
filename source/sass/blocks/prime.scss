@@ -144,22 +144,24 @@
 @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .prime {
     width: 90%;
-    min-height: 590px;
+    min-height: 580px;
     margin-bottom: 0;
-    padding-left: 10%;
+    padding-left: 6%;
     background-image: url("../img/boards-mobile@1x.png");
-    background-position: top 2% right -5%;
+    background-position: top 7% right;
   }
 
   .prime__wrap {
-    max-width: 290px;
+    width: 90%;
+    min-width: 290px;
     margin-top: 210px;
+    max-height: 380px;
   }
 
   .prime__head {
     font-size: 40px;
     line-height: 47px;
-    margin-bottom: 15px;
+    margin-bottom: 28px;
   }
 
   .prime__text {
@@ -170,8 +172,8 @@
     &::before {
       width: 33px;
       height: 2px;
-      top: 12px;
-      left: -40px;
+      top: 14px;
+      left: -45px;
     }
   }
 
@@ -184,10 +186,10 @@
 
     &--mob {
       display: flex;
-      max-width: 287px;
+      min-width: 287px;
       height: 55px;
       width: 89.5%;
-      margin-top: 50px;
+      margin-top: 45px;
       margin-left: 0;
       margin-bottom: 0;
     }

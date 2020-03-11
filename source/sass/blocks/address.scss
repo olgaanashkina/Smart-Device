@@ -1,6 +1,6 @@
 .address {
   width: 56.7%;
-  max-width: 335px;
+  max-width: 333px;
   min-height: 145px;
   margin-bottom: 45px;
   display: flex;
@@ -44,10 +44,10 @@
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .address {
     width: 50%;
-    max-width: 354px;
+    max-width: 345px;
     min-height: 220px;
     margin-bottom: 0;
-    padding-top: 35px;
+    padding-top: 39px;
     display: flex;
     flex-direction: column;
   }
@@ -72,11 +72,12 @@
 
   .address__cont {
     width: 93%;
+    padding-top: 8px;
     display: flex;
     flex-direction: column;
   }
 
   .address__phone--bottom {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }

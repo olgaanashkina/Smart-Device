@@ -1,15 +1,16 @@
 .advantages {
   width: 100%;
-  min-height: 820px;
+  min-height: 740px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
 }
 
 .advantages__list {
-  width: 63%;
-  @include center;
+  width: 61%;
   list-style: none;
+  @include marginnone;
+  @include center;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -21,8 +22,7 @@
 
 .advantages__item {
   position: relative;
-  width: 48%;
-  margin-right: 2%;
+  width: 48.5%;
   margin-bottom: 30px;
   min-height: 300px;
   display: flex;
@@ -31,10 +31,7 @@
   border-left: solid 3px $blue;
   background-color: $white;
   color: $gray;
-
-  &:nth-child(2n) {
-      margin-right: 0;
-  }
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -89,7 +86,7 @@
 }
 
 .advantages__content {
-  width: 86%;
+  width: 84.7%;
   @include marginnone;
   padding: 0 7%;
   text-align: left;
@@ -98,18 +95,24 @@
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .advantages {
     width: 100%;
-    min-height: 650px;
+    min-height: 625px;
     padding-top: 54px;
   }
 
   .advantages__list {
-    width: 93.5%;
+    width: 94%;
     padding-left: 0;
   }
 
   .advantages__item {
+    width: 47.5%;
     min-height: 232px;
     padding-bottom: 20px;
+
+    &--privacy,
+    &--price {
+    padding-bottom: 0;
+    }
   }
 
   .advantages__icon {
@@ -136,8 +139,8 @@
   }
 
   .advantages__head {
-    padding-top: 70px;
-    padding-bottom: 10px;
+    padding-top: 65px;
+    margin-bottom: 11px;
   }
 
   .advantages__content {
@@ -152,20 +155,28 @@
   .advantages {
     width: 100%;
     min-height: 1160px;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   .advantages__list {
-    width: 92%;
+    width: 91.2%;
     @include center;
-    padding-left: 0;
   }
 
   .advantages__item {
     width: 100%;
     min-height: 232px;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     margin-right: 0;
+    margin-bottom: 18px;
+
+    &--privacy {
+      padding-bottom: 0;
+    }
+
+    &--price {
+      padding-bottom: 10px;
+    }
   }
 
   .advantages__icon {
@@ -175,9 +186,19 @@
   }
 
   .advantages__head {
-    padding-top: 75px;
-    padding-bottom: 15px;
+    width: 85%;
+    padding-top: 73px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 140.62%;
+  }
+
+  .advantages__content {
+    width: 86.7%;
+
+    &--shipper {
+      width: 87.2%;
+    }
   }
 }

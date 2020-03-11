@@ -104,27 +104,24 @@ openModal.addEventListener('click', function () {
   });
 });
 
-var letterForm = document.querySelector('.prime__toggle');
-letterForm.addEventListener('click', function () {
-  document.querySelector('.form__name').focus();
-  var form = document.querySelector('.form');
-  var inputName = document.querySelector('.form__name');
-  var inputPhone = document.querySelector('.form__phone');
-  var inputMessage = document.querySelector('.form__text');
-  inputName.value = localStorage.getItem('inputName');
-  inputPhone.value = localStorage.getItem('inputPhone');
-  inputMessage.value = localStorage.getItem('inputMessage');
+var form = document.querySelector('.form');
+var inputName = document.querySelector('.form__name');
+var inputPhone = document.querySelector('.form__phone');
+var inputMessage = document.querySelector('.form__text');
+inputName.value = localStorage.getItem('inputName');
+inputPhone.value = localStorage.getItem('inputPhone');
+inputMessage.value = localStorage.getItem('inputMessage');
 
-  validationName(inputName);
-  validationPhone(inputPhone);
-  validationMessage(inputMessage);
+validationName(inputName);
+validationPhone(inputPhone);
+validationMessage(inputMessage);
 
-  form.addEventListener('submit', function () {
-    localStorage.setItem('inputName', '');
-    localStorage.setItem('inputPhone', '');
-    localStorage.setItem('inputMessage', '');
-  });
+form.addEventListener('submit', function () {
+  localStorage.setItem('inputName', '');
+  localStorage.setItem('inputPhone', '');
+  localStorage.setItem('inputMessage', '');
 });
+
 
 var accordionItem = document.querySelectorAll('.accordion');
 var open = document.getElementsByClassName('accordion-open');

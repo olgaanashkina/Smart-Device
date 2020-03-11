@@ -1,6 +1,5 @@
 .wrapper {
   width: 100%;
-  background-color: $dark-grey;
   background-image: url("../img/background-desctop.png");
   background-repeat: no-repeat;
   background-size: auto;
@@ -30,6 +29,7 @@
 
 @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .wrapper {
+    // max-height: 647px;
     background-image: url("../img/background-mobile.png");
     background-size: 100%;
 

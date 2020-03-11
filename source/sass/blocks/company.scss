@@ -2,9 +2,9 @@
   position: relative;
   width: 51%;
   min-height: 340px;
-  margin-bottom: 100px;
+  margin-bottom: 76px;
   align-self: flex-end;
-  padding-right: 21%;
+  padding-right: 20%;
   display: flex;
   flex-direction: column;
   color: $gray;
@@ -15,7 +15,7 @@
     width: 220px;
     height: 317px;
     top: 0px;
-    left: -190px;
+    left: -210px;
     background-image: url("../img/2005.png");
     background-repeat: no-repeat;
   }
@@ -34,7 +34,6 @@
 .company__content {
   @include marginnone;
   margin-bottom: 20px;
-  margin-bottom: 30px;
 
   &--tab {
     display: none;
@@ -45,6 +44,7 @@
   @include marginnone;
   width: 180px;
   height: 45px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,22 +71,26 @@
   .company {
     width: 69.5%;
     min-height: 360px;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     margin-left: 210px;
     align-self: flex-start;
     padding-right: 0;
 
     &::before {
+      width: 250px;
+      height: 360px;
       top: 0px;
-      left: -210px;
+      left: -220px;
       background-image: url("../img/2005.png");
       background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
   .company__heading {
     font-size: 32px;
     line-height: 140.62%;
+    margin-bottom: 25px;
   }
 
   .company__content {
@@ -98,11 +102,15 @@
       display: block;
     }
   }
+
+  .company__link {
+    margin-top: 23px;
+  }
 }
 
 @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
   .company {
-    width: 92%;
+    width: 95%;
     @include center;
     @include marginnone;
     margin-left: 0;
@@ -118,6 +126,8 @@
   }
 
   .company__content {
+    margin-bottom: 33px;
+
     &--desctop {
       display: none;
     }
@@ -128,6 +138,7 @@
   }
 
   .company__link {
+    margin-top: 0;
     margin-bottom: 65px;
   }
 }

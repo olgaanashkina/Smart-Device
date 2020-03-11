@@ -7,17 +7,30 @@
   background-color: $blue;
   background-image: url("../img/airplane-desctop.png");
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: 98% 70%;
 }
 
 .letter__wrap {
-  width: 34%;
+  position: relative;
+  width: 29%;
   min-width: 570px;
-  margin-right: 15%;
+  max-height: 650px;
+  margin-right: 19.7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 511px;
+    height: 288px;
+    top: 24%;
+    left: -108%;
+    background-image: url("../img/paper-airplane.png");
+    background-repeat: no-repeat;
+  }
 }
 
 .letter__tagline {
@@ -39,18 +52,25 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .letter {
-    min-height: 660px;
+    min-height: 662px;
     justify-content: center;
     background-image: none;
   }
 
   .letter__wrap {
     width: 77%;
-    min-width: 591px;
+    min-width: 590px;
+    justify-content: flex-start;
     @include center;
+
+    &::before {
+      display: none;
+    }
   }
 
   .letter__tagline {
+    margin-top: 80px;
+    margin-bottom: 15px;
     font-size: 32px;
     line-height: 140.62%;
   }
@@ -69,17 +89,22 @@
     width: 90%;
     min-width: 290px;
     @include center;
+
+    &::before {
+      display: none;
+    }
   }
 
   .letter__tagline {
     width: 80%;
     max-width: 245px;
     font-size: 28px;
+    line-height: 140.62%;
   }
 
   .letter__content {
     width: 80%;
     max-width: 245px;
-    margin-bottom: 35px;;
+    margin-bottom: 25px;;
   }
 }

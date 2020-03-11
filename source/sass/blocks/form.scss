@@ -19,10 +19,10 @@
 
 .form__name,
 .form__phone {
-  width: 43%;
-  min-width: 230px;
+  width: 42%;
+  min-width: 228px;
   border: none;
-	padding: 14px 16px;
+	padding: 16px 17px;
 	background-color: rgba(255, 255, 255, 0.1);
   color: $white;
   font-size: 16px;
@@ -57,6 +57,7 @@
 .form__button {
   width: 47%;
   min-width: 270px;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -71,6 +72,8 @@
   display: block;
   cursor: pointer;
   user-select: none;
+  font-size: 14px;
+  line-height: 16px;
   opacity: 0.8;
 }
 
@@ -103,7 +106,15 @@
   .form {
     width: 100%;
     min-width: 590px;
-    min-height: 345px;
+    min-height: 347px;
+  }
+
+  .form__wrap {
+    align-items: center;
+  }
+
+  .form__button {
+    min-height: 46px;
   }
 }
 
@@ -111,7 +122,7 @@
   .form {
     width: 100%;
     min-width: 290px;
-    min-height: 410px;
+    min-height: 420px;
     @include marginnone;
   }
 
@@ -133,13 +144,13 @@
   .form__text {
     width: 90%;
     min-width: 258px;
-    max-height: 104px;
+    max-height: 95px;
   }
 
   .form__wrap {
     width: 100%;
     min-width: 290px;
-    min-height: 110px;
+    min-height: 120px;
     flex-direction: column-reverse;
     align-items: center;
   }

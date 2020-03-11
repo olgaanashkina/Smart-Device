@@ -68,7 +68,7 @@
                 <use xlink:href="#icon-contractors"></use>
               </svg>
               <h3 class="advantages__head">Крупные поставщики</h3>
-              <p class="advantages__content">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+              <p class="advantages__content advantages__content--shipper">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </li>
             <li class="advantages__item advantages__item--privacy">
               <svg class="advantages__icon advantages__icon--privacy" width="36px" height="31px">
@@ -100,7 +100,7 @@
           <ul class="goods__list">
             <li class="goods__item goods__item--making">
               <a class="goods__link" href="#">
-                <p class="goods__title">Производство  печатных плат</p>
+                <p class="goods__title">Производство печатных плат</p>
                 <div class="goods__pointer"></div>
               </a>
             </li>
@@ -112,7 +112,7 @@
             </li>
             <li class="goods__item goods__item--led">
               <a class="goods__link" href="#">
-                <p class="goods__title">Комплектующие для светотехники</p>
+                <p class="goods__title goods__title--led">Комплектующие для светотехники</p>
                 <div class="goods__pointer"></div>
               </a>
             </li>
@@ -131,7 +131,7 @@
             </div>
             <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="7" cols="70" required="required"></textarea>
             <div class="form__wrap">
-              <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent">
+              <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent" required>
               <label for="consent">Я согласен на обработку  персональных данных</label>
               <button class="form__button toggle" type="submit" name="button">Задать вопрос</button>
             </div>
@@ -144,9 +144,9 @@
         <section class="footer__producer">
           <div class="footer__cont">
             <a class="footer__logo logotype logotype--foot">
-              <img class="logotype__image" src="img/logo-desctop.png" width="52" height="52" alt="Логотип Smart Device">
-                <div class="logotype__wrap logotype__wrap--foot">
-                <h1 class="logotype__head logotype__head--foot">Smart Device</h1>
+              <img class="logotype__image logotype__image--foot" src="img/logo-desctop.png" width="52" height="52" alt="Логотип Smart Device">
+              <div class="logotype__wrap logotype__wrap--foot">
+                <h1 class="logotype__head logotype__head--foot">Service Device</h1>
                 <p class="logotype__slogan logotype__slogan--foot">умные технологии</p>
               </div>
             </a>
@@ -221,13 +221,15 @@
       </div>
       <div class="footer__wrap">
         <section class="footer__addition addition">
-          <h2 class="addition__head visually-hidden">Копирайт</h2>
-          <p class="addition__copyright">Все права защищены</p>
-          <p class="addition__owner">1999-2018 SD Service Devices</p>
-          <a class="addition__link" href="#">
-            <p class="addition__privacy">Условия конфиденциальности</p>
-          </a>
-          <p class="addition__developer">Developed by wow studio</p>
+          <div class="addition__wrap">
+            <h2 class="addition__head visually-hidden">Копирайт</h2>
+            <p class="addition__copyright">Все права защищены</p>
+            <p class="addition__owner">1999-2018 SD Service Devices</p>
+            <a class="addition__link" href="#">
+              <p class="addition__privacy">Условия конфиденциальности</p>
+            </a>
+            <p class="addition__developer">Developed by wow studio</p>
+          </div>
         </section>
       </div>
     </footer>
@@ -244,7 +246,7 @@
             <input class="modal__phone" type="text" name="tel" value="" placeholder="Телефон" maxlength="16" required="required">
             <textarea class="modal__text" name="text" placeholder="Ваш вопрос" rows="4" cols="40" required="required"></textarea>
             <button class="modal__button toggle" type="submit">Отправить</button>
-            <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="resolution">
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="resolution" required>
             <label for="resolution">Я согласен на обработку  персональных данных</label>
           </form>
         </div>
@@ -252,6 +254,5 @@
     </section>
   </template>
   <script src="js/script.js"></script>
-  <!-- <script src="js/form.js"></script> -->
 </body>
 </html>

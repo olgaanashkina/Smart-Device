@@ -46,6 +46,7 @@
   background-repeat: no-repeat;
   background-color: $blue;
   border: none;
+  cursor: pointer;
 }
 
 .modal__tagline {
@@ -113,6 +114,7 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+  cursor: pointer;
 
     &:hover,
     &:focus {
