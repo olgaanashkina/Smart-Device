@@ -98,6 +98,12 @@ openModal.addEventListener('click', function () {
   validationMessage(inputMessage);
 
   form.addEventListener('submit', function () {
+    // var checkbox = document.querySelector('.modal__checkbox');
+    // if (checkbox.checked) {
+    //   true;
+    // } else {
+    //   alert ('Подтвердите согласие на обработку персональных данных');
+    // }
     localStorage.setItem('inputName', '');
     localStorage.setItem('inputPhone', '');
     localStorage.setItem('inputMessage', '');

@@ -67,6 +67,7 @@
 }
 
 .modal__form {
+  position: relative;
   width: 100%;
   min-height: 412px;
   display: flex;
@@ -121,6 +122,13 @@
       background-color: $white;
       color: $blue;
     }
+}
+
+.modal__checkbox {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  z-index: -1;
 }
 
 .modal__wrap label {
