@@ -16,6 +16,8 @@
 
 .logotype__image {
   margin-right: 16px;
+  width: 52px;
+  height: 52px;
 }
 
 .logotype__wrap {
@@ -49,6 +51,7 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .logotype {
+    min-width: 250px;
 
     &--foot {
       align-self: center;

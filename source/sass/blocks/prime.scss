@@ -19,6 +19,7 @@
 }
 
 .prime__head {
+  width: 100%;
   @include marginnone;
   margin-bottom: 30px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -32,6 +33,7 @@
 }
 
 .prime__text {
+  width: 86%;
   position: relative;
   @include marginnone;
   margin-left: 100px;
@@ -123,7 +125,7 @@
   }
 
   .prime__text {
-    margin-left: 50px;;
+    margin-left: 50px;
     font-size: 18px;
     line-height: 156.8%;
 

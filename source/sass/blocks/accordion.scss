@@ -36,11 +36,26 @@
     }
   }
 
+  .accordion-opened {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
   .accordion__content {
     display: none;
   }
 
   .accordion-open + .content {
     display: block;
+  }
+
+
+  .accordion-opened + .content {
+  display: block;
   }
 }
