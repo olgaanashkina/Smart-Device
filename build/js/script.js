@@ -99,9 +99,13 @@ validationPhone(inputPhone);
 validationMessage(inputMessage);
 
 form.addEventListener('submit', function () {
-  localStorage.setItem('inputName', '');
-  localStorage.setItem('inputPhone', '');
-  localStorage.setItem('inputMessage', '');
+  if (!!window.MSInputMethodContext && !!document.documentMode) {
+    form.reset();
+  } else {
+    localStorage.setItem('inputName', '');
+    localStorage.setItem('inputPhone', '');
+    localStorage.setItem('inputMessage', '');
+  }
 });
 
 var renderModal = function () {
@@ -161,9 +165,13 @@ openModal.addEventListener('click', function (evt) {
   validationMessage(inputMessage);
 
   form.addEventListener('submit', function () {
-    localStorage.setItem('inputName', '');
-    localStorage.setItem('inputPhone', '');
-    localStorage.setItem('inputMessage', '');
+    if (!!window.MSInputMethodContext && !!document.documentMode) {
+      form.reset();
+    } else {
+      localStorage.setItem('inputName', '');
+      localStorage.setItem('inputPhone', '');
+      localStorage.setItem('inputMessage', '');
+    }
   });
 });
 
