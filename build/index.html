@@ -73,7 +73,7 @@
   </div>
   <div class="wrapper">
     <header class="page-header">
-      <a class="page-header__link logotype">
+      <a class="page-header__link logotype" aria-label="Логотип Smart Device">
         <img class="logotype__image" src="img/logo-desctop.png" width="52" height="52" alt="Логотип Smart Device">
         <div class="logotype__wrap">
           <h2 class="logotype__head">Smart Device</h2>
@@ -82,13 +82,13 @@
       </a>
       <button class="page-header__button visually-hidden" type="button" name="button"></button>
       <div class="page-header__feedback feedback">
-        <a class="feedback__link feedback__link--mail" href="mailto:info@sd.ru" target="_blank">
+        <a class="feedback__link feedback__link--mail" href="mailto:info@sd.ru" target="_blank" aria-label="Электронная почта">
           <svg class="feedback__icon feedback__icon--mail" width="19px" height="14px">
             <use xlink:href="#icon-mail"></use>
           </svg>
   				<span class="feedback__content">info@sd.ru</span>
   			</a>
-        <a class="feedback__link feedback__link--phone" href="tel:+74950005252">
+        <a class="feedback__link feedback__link--phone" href="tel:+74950005252" aria-label="Телефон">
           <svg class="feedback__icon feedback__icon--phone" width="18px" height="18px">
             <use xlink:href="#icon-phone"></use>
           </svg>
@@ -104,7 +104,7 @@
           <p class="prime__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
           <a class="prime__toggle toggle" href="#form">Получить бесплатную консультацию</a>
           <a class="prime__toggle prime__toggle--mob toggle" href="#form">Бесплатная консультация</a>
-          <a class="prime__link" href="#advantages">
+          <a class="prime__link" href="#advantages" aria-label="Скролл вниз">
             <span class="prime__scroll">Скролл вниз</span>
           </a>
         </div>
@@ -183,8 +183,10 @@
           <p class="letter__content">Мы проконсультируем Вас бесплатно</p>
           <form class="form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
             <div class="form__communication">
-              <input class="form__name" type="text" name="name" value="" placeholder="Имя" minlength="2" maxlength="20" required="required">
-              <input class="form__phone" type="text" name="tel" value="" placeholder="Телефон" maxlength="16" required="required">
+              <input class="form__name" type="text" name="name" value="" id="forename" placeholder="Имя" minlength="2" maxlength="20" required="required">
+              <label class="visually-hidden" for="forename">Укажите имя</label>
+              <input class="form__phone" type="text" name="tel" value="" id="phone" placeholder="Телефон" maxlength="16" required="required">
+              <label class="visually-hidden" for="phone">Укажите телефон</label>
             </div>
             <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="7" cols="70" required="required"></textarea>
             <div class="form__wrap">
@@ -268,10 +270,10 @@
           <div class="address__wrap">
             <h2 class="address__head accordion">Наш офис</h2>
             <div class="address__cont content">
-              <p class="address__content ">г. Мытищи, Олимпийский проспект, д.10</p>
-              <p class="address__phone">+7 (495) 589-40-50</p>
-              <p class="address__phone">+7 (925) 003-87-67</p>
-              <p class="address__phone address__phone--bottom">+7 (926) 926-080-79</p>
+              <p class="address__content">г. Мытищи, Олимпийский проспект, д.10</p>
+              <a class="address__phone" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a class="address__phone" href="tel:+74950038767">+7 (925) 003-87-67</a>
+              <a class="address__phone address__phone--bottom" href="tel:+749592608079">+7 (926) 926-080-79</a>
             </div>
           </div>
         </section>
@@ -285,13 +287,12 @@
             <a class="addition__link" href="#">
               <p class="addition__privacy">Условия конфиденциальности</p>
             </a>
-            <p class="addition__developer">Developed by wow studio</p>
+            <a class="addition__developer" href="#">Developed by wow studio</a>
           </div>
         </section>
       </div>
     </footer>
   </div>
-  <!-- <template id="modal"> -->
     <section class="modal modal__closed">
       <div class="modal__overlay">
         <div class="modal__container">
@@ -300,8 +301,10 @@
             <h2 class="modal__tagline">Закажите звонок</h2>
             <p class="modal__content">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
             <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-              <input class="modal__name" type="text" name="name" value="" placeholder="Имя" minlength="2" maxlength="20" required="required">
-              <input class="modal__phone" type="text" name="tel" value="" placeholder="Телефон" maxlength="16" required="required">
+              <input class="modal__name" type="text" name="name" value="" id="name" placeholder="Имя" minlength="2" maxlength="20" required="required">
+              <label class="visually-hidden" for="name">Укажите имя</label>
+              <input class="modal__phone" type="text" name="tel" value="" id="telephone" placeholder="Телефон" maxlength="16" required="required">
+              <label class="visually-hidden" for="telephone">Укажите телефон</label>
               <textarea class="modal__text" name="text" placeholder="Ваш вопрос" rows="4" cols="40" required="required"></textarea>
               <button class="modal__button toggle" type="submit">Отправить</button>
               <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="resolution" required="required">
@@ -311,7 +314,6 @@
         </div>
       </div>
     </section>
-  <!-- </template> -->
   <script src="js/script.js"></script>
 </body>
 </html>

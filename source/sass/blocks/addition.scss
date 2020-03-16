@@ -68,6 +68,11 @@
   margin-left: auto;
   min-height: 55px;
   padding-top: 14px;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {

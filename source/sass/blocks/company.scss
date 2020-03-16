@@ -43,7 +43,7 @@
 .company__link {
   @include marginnone;
   width: 180px;
-  height: 45px;
+  min-height: 45px;
   margin-top: 15px;
   display: flex;
   justify-content: center;

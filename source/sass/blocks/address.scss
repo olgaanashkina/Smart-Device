@@ -41,6 +41,14 @@
   opacity: 0.5;
 }
 
+.address__phone {
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .address {
     width: 50%;

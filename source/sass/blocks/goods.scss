@@ -30,7 +30,6 @@
   @include marginnone;
   list-style: none;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -41,6 +40,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 60px;
+  margin-right: 23px;
+  background-color: $gray;
+
+  &:nth-child(3n) {
+      margin-right: 0;
+    }
 
   &--making {
     background-image: url("../img/make-desctop@1x.jpg");

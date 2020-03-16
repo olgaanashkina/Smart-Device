@@ -132,14 +132,14 @@
   .form {
     width: 100%;
     min-width: 290px;
-    min-height: 420px;
+    min-height: 423px;
     @include marginnone;
   }
 
   .form__communication {
     width: 100%;
     min-width: 290px;
-    min-height: 120px;
+    min-height: 130px;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
@@ -154,13 +154,14 @@
   .form__text {
     width: 90%;
     min-width: 258px;
-    max-height: 95px;
+    max-height: 70px;
   }
 
   .form__wrap {
     width: 100%;
     min-width: 290px;
-    min-height: 120px;
+    min-height: 110px;
+    padding-bottom: 14px;
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -172,7 +173,7 @@
 
   .form__button {
     width: 290px;
-    height: 48px;
+    height: 46px;
   }
 
   .form__checkbox + label::before {
