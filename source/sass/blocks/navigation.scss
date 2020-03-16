@@ -4,6 +4,14 @@
   min-height: 120px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.navigation__wrap {
+  width: 100%;
+  max-height: 120px;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation__head {
@@ -55,15 +63,17 @@
     min-width: 325px;
     min-height: 220px;
     margin-left: 3.5%;
+    margin-bottom: 20px;
     padding-top: 39px;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
   .navigation__list {
     width: 100%;
     min-width: 245px;
-    max-height: 290px;
+    max-height: 310px;
     flex-wrap: nowrap;
   }
 
