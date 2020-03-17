@@ -23,6 +23,9 @@ var validationName = function (inputName) {
 }
 
 var removeMask = function (input) {
+  if (input == null || input == '') {
+    return '';
+  }
   if (input.substring(0, 3) == '+7(') {
     input = input.substring(3);
   }
@@ -59,7 +62,11 @@ var validationPhone = function (inputPhone) {
   }
   inputPhone.oninput = function () {
     inputPhone.value = addMask(removeMask(inputPhone.value));
-    localStorage.setItem('inputPhone', removeMask(inputPhone.value));
+    if (!!window.MSInputMethodContext && !!document.documentMode) {
+      true;
+    } else {
+      localStorage.setItem('inputPhone', removeMask(inputPhone.value));
+    }
   }
 }
 

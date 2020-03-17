@@ -9,8 +9,6 @@
     z-index: 10;
     width: 100%;
     min-height: 880px;
-    // background-color: rgba(0, 0, 0, 0.4);
-    // overflow: auto;
 }
 
 .modal__closed {
@@ -98,6 +96,10 @@
   align-items: stretch;
 }
 
+.modal__form input:invalid {
+  box-shadow: none;
+}
+
 .modal__name,
 .modal__phone {
   width: 364px;
@@ -122,6 +124,8 @@
   color: $white;
   font-size: 16px;
   resize: none;
+  box-shadow: none;
+  overflow: hidden;
 
   &::placeholder {
     color: $white;
