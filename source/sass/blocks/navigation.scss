@@ -32,6 +32,7 @@
   width: 100%;
   list-style: none;
   @include marginnone;
+  min-height: 119px;
   max-height: 120px;
   display: flex;
   flex-direction: column;

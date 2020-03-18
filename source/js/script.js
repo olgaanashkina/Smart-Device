@@ -191,9 +191,10 @@ for (var i = 0; i < accordions.length; i++) {
       this.classList.toggle('accordion-open');
   }
 }
+
 var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
-var animationTime = 1000;
-var framesCount = 7;
+var animationTime = 500;
+var framesCount = 75;
 anchors.forEach(function(item) {
   item.addEventListener('click', function(evt) {
     evt.preventDefault();
