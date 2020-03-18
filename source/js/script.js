@@ -182,19 +182,30 @@ openModal.addEventListener('click', function (evt) {
   });
 });
 
-if (!!window.MSInputMethodContext && !!document.documentMode) {
-  var accordion = document.querySelectorAll('.accordion');
-  for (var i = 0; i < accordion.length; i++) {
-    accordion[i].classList.add('accordion-opened');
-  }
-} else {
-  var accordionItem = document.querySelectorAll('.accordion');
-  var open = document.getElementsByClassName('accordion-open');
-  Array.from(accordionItem).forEach(function(item, i, accordionItem) {
-    item.addEventListener('click', function(e) {
-      if (open.length > 0 && open[0] !== this)
+var accordions = document.getElementsByClassName("accordion");
+var open = document.getElementsByClassName('accordion-open');
+for (var i = 0; i < accordions.length; i++) {
+  accordions[i].onclick = function() {
+    if (open.length > 0 && open[0] !== this)
       open[0].classList.remove('accordion-open');
       this.classList.toggle('accordion-open');
-    });
-  });
+  }
 }
+var anchors = [].slice.call(document.querySelectorAll('a[href*="#"]'));
+var animationTime = 1000;
+var framesCount = 7;
+anchors.forEach(function(item) {
+  item.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top;
+    let scroller = setInterval(function() {
+      let scrollBy = coordY / framesCount;
+      if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+        window.scrollBy(0, scrollBy);
+      } else {
+        window.scrollTo(0, coordY);
+        clearInterval(scroller);
+      }
+    }, animationTime / framesCount);
+  });
+});

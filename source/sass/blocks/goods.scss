@@ -84,6 +84,7 @@
 .goods__title {
   width: 170px;
   @include marginnone;
+  min-height: 557px;
   margin-top: 55px;
   margin-left: 46px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
