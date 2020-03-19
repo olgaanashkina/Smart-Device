@@ -179,7 +179,8 @@
     margin-left: 44px;
 
     &--led {
-      margin-top: 40px;
+      min-height: 144px;
+      margin-top: 50px;
     }
   }
 }
@@ -209,13 +210,15 @@
   .goods__link {
     width: 100%;
     min-width: 290px;
-    max-height: 256px;
+    min-height: 256px;
+    max-height: 258px;
   }
 
   .goods__item {
     width: 100%;
     min-width: 290px;
-    max-height: 256px;
+    min-height: 256px;
+    max-height: 258px;
     margin-right: 0;
     background-repeat: no-repeat;
     margin-bottom: 30px;
