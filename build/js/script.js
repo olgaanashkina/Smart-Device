@@ -105,7 +105,11 @@ validationName(inputName);
 validationPhone(inputPhone);
 validationMessage(inputMessage);
 
-form.addEventListener('submit', function () {
+form.addEventListener('submit', function (evt) {
+  if (inputPhone.value.length != 16) {
+    evt.preventDefault();
+    inputPhone.focus();
+  }
   if (!!window.MSInputMethodContext && !!document.documentMode) {
     form.reset();
   } else {
@@ -125,17 +129,20 @@ var renderModal = function () {
   } else {
     modal.classList.add('modal__closed');
     modal.classList.remove('modal__open');
+    overflow.classList.remove('scroll-hidden');
   }
   var closedModal = modal.querySelector('.modal__toggle');
   closedModal.addEventListener('click', function (evt) {
     evt.preventDefault();
     modal.classList.remove('modal__open');
+    overflow.classList.remove('scroll-hidden');
     modal.classList.add('modal__closed');
   });
   document.addEventListener('keydown', function (evt) {
     if (evt.keyCode === ESC_KEYCODE) {
       evt.preventDefault();
       modal.classList.remove('modal__open');
+      overflow.classList.remove('scroll-hidden');
       modal.classList.add('modal__closed');
     }
   });
@@ -145,6 +152,7 @@ var renderModal = function () {
     document.addEventListener('click', function (evt) {
       if (evt.target.matches('.modal__overlay')) {
         modal.classList.remove('modal__open');
+        overflow.classList.remove('scroll-hidden');
         modal.classList.add('modal__closed');
       }
     });
@@ -173,7 +181,11 @@ openModal.addEventListener('click', function (evt) {
   validationPhone(inputPhone);
   validationMessage(inputMessage);
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (evt) {
+    if (inputPhone.value.length != 16) {
+      evt.preventDefault();
+      inputPhone.focus();
+    }
     if (!!window.MSInputMethodContext && !!document.documentMode) {
       form.reset();
     } else {
