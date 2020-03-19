@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
-  <link rel="preload" href="/fonts/ptmono.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/robotocondensed.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptmono.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensed.woff2" as="font" crossorigin="anonymous">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -23,7 +23,6 @@
           <p class="logotype__slogan">умные технологии</p>
         </div>
       </a>
-      <button class="page-header__button visually-hidden" type="button" name="button"></button>
       <div class="page-header__feedback feedback">
         <a class="feedback__link feedback__link--mail" href="mailto:info@sd.ru" target="_blank" aria-label="Электронная почта">
           <svg class="feedback__icon feedback__icon--mail" width="19px" height="14px">
@@ -45,8 +44,12 @@
         <div class="prime__wrap">
           <h2 class="prime__head">Печатные платы</h2>
           <p class="prime__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="prime__toggle toggle scroll" href="#form">Получить бесплатную консультацию</a>
-          <a class="prime__toggle prime__toggle--mob toggle" href="#form">Бесплатная консультация</a>
+          <a class="prime__toggle toggle scroll" href="#form">
+            <span class="prime__cont">Получить бесплатную консультацию</span>
+          </a>
+          <a class="prime__toggle prime__toggle--mob toggle" href="#form">
+            <span class="prime__cont">Бесплатная консультация</span>
+          </a>
           <a class="prime__link scroll-to" href="#advantages" aria-label="Скролл вниз">
             <span class="prime__scroll">Скролл вниз</span>
           </a>
@@ -131,7 +134,7 @@
               <input class="form__phone" type="text" name="tel" value="" id="phone" placeholder="Телефон"  maxlength="16" required="required">
               <label class="visually-hidden" for="phone">Укажите телефон</label>
             </div>
-            <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="7" cols="70" required="required"></textarea>
+            <textarea class="form__text" name="text" placeholder="Ваш вопрос" rows="7" cols="70" required="required" aria-label="Задайте Ваш вопрос"></textarea>
             <div class="form__wrap">
               <input class="form__checkbox visually-hidden" type="checkbox" name="checkbox" id="consent"  required="required">
               <label for="consent">Я согласен на обработку  персональных данных</label>
@@ -248,7 +251,7 @@
               <label class="visually-hidden" for="name">Укажите имя</label>
               <input class="modal__phone" type="text" name="tel" value="" id="telephone" placeholder="Телефон" maxlength="16" required="required">
               <label class="visually-hidden" for="telephone">Укажите телефон</label>
-              <textarea class="modal__text" name="text" placeholder="Ваш вопрос" rows="4" cols="40" required="required"></textarea>
+              <textarea class="modal__text" name="text" placeholder="Ваш вопрос" rows="4" cols="40" required="required" aria-label="Задайте Ваш вопрос"></textarea>
               <button class="modal__button toggle" type="submit">Отправить</button>
               <input class="modal__checkbox visually-hidden" type="checkbox" name="checkbox" id="resolution" required="required">
               <label for="resolution">Я согласен на обработку  персональных данных</label>

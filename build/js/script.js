@@ -116,10 +116,12 @@ form.addEventListener('submit', function () {
 });
 
 var renderModal = function () {
+  var overflow = document.querySelector('body');
   var modal = document.querySelector('.modal');
   if (modal.classList.contains('modal__closed')) {
     modal.classList.remove('modal__closed');
     modal.classList.add('modal__open');
+    overflow.classList.add('scroll-hidden');
   } else {
     modal.classList.add('modal__closed');
     modal.classList.remove('modal__open');

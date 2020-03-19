@@ -63,7 +63,6 @@
   align-self: flex-start;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 16px;
   line-height: 19px;
   border: none;
@@ -80,6 +79,10 @@
     color: $blue;
     background-color: $white;
   }
+}
+
+.prime__cont {
+  padding-top: 17px;
 }
 
 .prime__link {
